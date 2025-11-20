@@ -12,10 +12,10 @@ jobs:
   eslint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4 # Checkout your repository code
+      - uses: actions/checkout@v4 
       - name: Install dependencies
-        run: npm install # or yarn install, pnpm install
+        run: npm install
       - name: Run ESLint
         uses: stefanoeb/eslint-action@1.0.2 # Or another suitable ESLint action
         with:
-          files: './' # Specify files or directories to lint
+          files: 'src/' # Specify files or directories to lint
