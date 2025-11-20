@@ -2,13 +2,15 @@ name: Run ESLint
 
 on:
   push:
-    branches: [ master, develop ] # Adjust branches as needed
+    branches: 
+         - master
   pull_request:
-    branches: [ master, develop ] # Adjust branches as needed
+    branches:
+         - master
 
 jobs:
   eslint:
-    runs-on: ubuntu-latest , windows
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4 # Checkout your repository code
       - name: Install dependencies
