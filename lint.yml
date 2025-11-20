@@ -2,13 +2,13 @@ name: Run ESLint
 
 on:
   push:
-    branches: [ main, develop ] # Adjust branches as needed
+    branches: [ master, develop ] # Adjust branches as needed
   pull_request:
-    branches: [ main, develop ] # Adjust branches as needed
+    branches: [ master, develop ] # Adjust branches as needed
 
 jobs:
   eslint:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest , windows
     steps:
       - uses: actions/checkout@v4 # Checkout your repository code
       - name: Install dependencies
@@ -16,4 +16,4 @@ jobs:
       - name: Run ESLint
         uses: stefanoeb/eslint-action@1.0.2 # Or another suitable ESLint action
         with:
-          files: 'src/' # Specify files or directories to lint
+          files: './' # Specify files or directories to lint
